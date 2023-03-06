@@ -25,6 +25,10 @@ export default {
                               }
                         }
                   },
+                  {
+                        test: /\.css$/,
+                        use: 'css-loader'
+                  },
             ],
           },
           plugins: [
@@ -35,6 +39,7 @@ export default {
             new CopyPlugin({
                   patterns: [
                         { from: "public" },
+                        { from: "src/styles.css" },
                   ]}),
           ],
     };

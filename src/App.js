@@ -1,10 +1,20 @@
 import React, { useState } from 'react';
+import { Card, Button } from 'react-bootstrap';
+
 
 export default function App() {
   return (
     <>
-      <h1>Hello, world!</h1>
-      <Counter />
+    <Card>
+      <Card.Header as="h5">Experimental Grab Plugin</Card.Header>
+      <Card.Body>
+        <Card.Title>Just tru to login with Google</Card.Title>
+        <Card.Text>
+          Please, use your gmail account.
+        </Card.Text>
+        <Button variant="primary">Login</Button>
+      </Card.Body>
+    </Card>
     </>
   );
 }
