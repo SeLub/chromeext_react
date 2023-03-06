@@ -1,0 +1,11 @@
+{
+      "name": "React Grab Extension",
+      "description": "React Experimental Grabbing Extension",
+      "version": "1.0",
+      "manifest_version": 3,
+      "permissions": ["tabs"],
+      "action": {
+        "default_title": "React Experimental Grabbing Extension",
+        "default_popup": "popup.html"
+      }
+    }
