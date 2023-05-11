@@ -14,7 +14,7 @@ export default {
             path: path.resolve(__dirname, 'dist'),
             filename: '[name].js',
           },
-          module: {
+      module: {
             rules: [{ 
                         test: /\.(js)$/,
                         exclude: /node_modules/, 
@@ -31,7 +31,7 @@ export default {
                   },
             ],
           },
-          plugins: [
+      plugins: [
             new HtmlWebpackPlugin({
             template: './src/popup.html',
             filename: 'popup.html'
@@ -40,6 +40,10 @@ export default {
                   patterns: [
                         { from: "public" },
                         { from: "src/styles.css" },
+                        { from: "src/document_start.js" },
+                        { from: "src/test.js" },
+                        { from: "src/inject.js" }
                   ]}),
           ],
+      devtool: 'source-map'
     };

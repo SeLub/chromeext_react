@@ -7,5 +7,14 @@
       "action": {
         "default_title": "React Experimental Grabbing Extension",
         "default_popup": "popup.html"
-      }
+      },
+      "content_scripts": [{
+        "js": ["document_start.js"],
+        "run_at": "document_start",
+        "matches": ["<all_urls>"]
+      }],
+      "web_accessible_resources": [{
+        "resources": ["test.js", "inject.js"],
+        "matches": ["<all_urls>"]
+      }]
     }

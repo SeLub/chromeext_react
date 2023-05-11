@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Button } from 'react-bootstrap';
+import initColor from './inject.js';
 
 
 export default function App() {
@@ -12,7 +13,9 @@ export default function App() {
         <Card.Text>
           Please, use your gmail account.
         </Card.Text>
+        <Counter></Counter>
         <Button variant="primary">Login</Button>
+        <Button variant="success" onClick={initColor}>Inject</Button>
       </Card.Body>
     </Card>
     </>
